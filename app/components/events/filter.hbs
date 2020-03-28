@@ -1,0 +1,20 @@
+
+<div class="row m-3 p-1 border">
+{{#each-in this.filters as |key filter|}}
+    <div class="col-2 pt-2">
+      <PowerSelectMultiple class='selecter'
+        @searchEnabled={{true}}
+        @options={{filter.options}}
+        @selected={{filter.selected_options}}
+        @placeholder={{filter.label}}
+        @onChange={{fn (mut filter.selected_options)}} as |name|>
+            {{name}}
+      </PowerSelectMultiple>
+    </div>
+{{/each-in}}
+<div class="col-2 pt-2">
+<button type="button" class="btn-small btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Filter
+</button>
+</div>
+</div>

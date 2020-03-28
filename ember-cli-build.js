@@ -4,9 +4,12 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    minifyCSS: {
+  enabled: false
+  }
   });
-
+  app.import('vendor/jquery-3.3.1.slim.min.js');
+  app.import('vendor/bootstrap.bundle.min.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

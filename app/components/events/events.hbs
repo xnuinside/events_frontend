@@ -1,0 +1,12 @@
+<Events::Filter/>
+ {{outlet}}
+
+<Events::Controls @view={{this}}/>
+
+ <div class="bg-white p-3 pt-4">
+{{#if this.isListView}}
+  <Events::ListView @events={{@model}}/>
+{{else}}
+  <Events::CalendarView @events={{@model}}/>
+{{/if}}
+</div>

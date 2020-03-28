@@ -1,0 +1,18 @@
+@import url("bootstrap.css");
+@import url("font-awesome.min.css");
+
+.bg-main {
+  background-color:#fff!important
+}
+
+body {
+  background-color:#F4F4F4!important;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.selecter {
+width: 5.5em;
+}

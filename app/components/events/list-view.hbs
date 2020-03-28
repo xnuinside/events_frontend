@@ -1,0 +1,25 @@
+<Events::Pagination/>
+<div class="row row-cols-1 row-cols-md-3">
+  {{#each @events as |event|}}
+  <div class="col mb-3">
+  <div class="card" style="width: 18rem;">
+    <img src="https://www.pngfind.com/pngs/m/535-5358469_happy-cosmo-tr420-fairly-odd-parents-transparent-hd.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><LinkTo @route="event" @model={{event}}>{{event.title}}</LinkTo></h5>
+      <span>ID:</span> {{event.id}}<br>
+        <p class="card-text">
+
+        <span>Country:</span> {{event.country}}<br>
+        <span>City:</span> {{event.city}}<br>
+       <span>Program Languages:</span> {{event.prog_language}}<br>
+
+        <span class="bold">Date:</span> {{event.date}}<br>
+
+      </p>
+      <LinkTo @route="event" @model={{event}} class="btn btn-primary">Details</LinkTo>
+    </div>
+  </div>
+
+</div>  {{/each}}
+</div>
+<Events::Pagination/>
